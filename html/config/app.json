@@ -1,0 +1,49 @@
+{
+  "version": 14,
+  "versionName": "2026.08.16",
+  "releaseDate": "2026-08-16",
+  "announcement": {
+    "title": "New Version Available",
+    "content": "",
+    "forceShow": false,
+    "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
+    "detailText": "View Details"
+  },
+  "features": {
+  },
+  "android": {
+    "buildNumber": 21,
+    "versionName": "2026.08.22",
+    "forceUpdate": false,
+    "announcement": {
+      "title": "Android Update Available",
+      "content": "Fixed known bugs.",
+      "forceShow": false,
+      "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
+      "detailText": "View Details"
+    },
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.vonchange.marmot.intl"
+  },
+  "ios": {
+    "buildNumber": 14,
+    "versionName": "2026.08.16",
+    "appStoreUrl": "https://apps.apple.com/app/id6804331547",
+    "forceUpdate": false,
+    "announcement": {
+      "title": "iOS Update Available",
+      "content": "1. Added remote Internet access for TVs, allowing you to control your home TV while away.\n2. Refactored PC Remote.",
+      "forceShow": false,
+      "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
+      "detailText": "View Details"
+    }
+  },
+  "video": {
+    "versionCode": 2,
+    "versionName": "20260623",
+    "namespace": "vonchange",
+    "name": "marmot-video",
+    "tag": "v2",
+    "packageName": "com.marmot.video",
+    "forceUpdate": false
+  }
+}

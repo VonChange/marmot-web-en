@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmot TV Remote - Touch Control for Android TV</title>
+
+    <meta name="description" content="Marmot TV Remote turns your phone into a touch remote for Android TV, TV boxes, and big screens. Control, type, manage apps, and operate your TV with less friction.">
+    <meta name="keywords" content="TV remote, Android TV remote, touchpad remote, ADB tools, smart TV remote, TV box remote, Marmot TV Remote">
+    <meta name="author" content="Marmot TV Remote">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f7faf7">
+    <link rel="canonical" href="https://www.utao.tv/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.utao.tv/">
+    <meta property="og:title" content="Marmot TV Remote - Touch Control for Android TV">
+    <meta property="og:description" content="Use your phone as a smooth touch remote for Android TV, TV boxes, and big screens.">
+    <meta property="og:image" content="https://www.utao.tv/img/marmot.png?tvImg=1">
+    <meta property="og:image:alt" content="Marmot TV Remote logo">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Marmot TV Remote">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Marmot TV Remote - Touch Control for Android TV">
+    <meta name="twitter:description" content="Use your phone as a smooth touch remote for Android TV, TV boxes, and big screens.">
+    <meta name="twitter:image" content="https://www.utao.tv/img/marmot.png?tvImg=1">
+
+    <link rel="icon" type="image/png" href="/img/marmot.png?tvImg=1">
+    <link rel="apple-touch-icon" href="/img/marmot.png?tvImg=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json" id="softwareSchema">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Marmot TV Remote",
+        "url": "https://www.utao.tv/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "Marmot TV Remote turns your phone into a touch remote for Android TV, TV boxes, and big screens.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Marmot TV Remote",
+            "url": "https://www.utao.tv/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="brand" href="/" data-i18n-attr="aria-label:nav.homeAria">
+                <img src="/img/marmot.png?tvImg=1" alt="" class="brand-icon" width="40" height="40">
+                <span data-i18n="brand.name">Marmot TV Remote</span>
+            </a>
+
+            <div class="nav-actions">
+                <a class="nav-link" href="#features" data-i18n="nav.features">Features</a>
+                <a class="nav-link" href="#download" data-i18n="nav.download">Download</a>
+                <a class="nav-link" href="#support" data-i18n="nav.support">Support</a>
+                <label class="language-switcher" for="languageSelect">
+                    <span class="language-switcher-label">Language</span>
+                    <select class="language-select" id="languageSelect" aria-label="Language">
+                    </select>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow" data-i18n="hero.eyebrow">Phone-powered TV control</p>
+                <h1 data-i18n="hero.title">Turn your phone into a smooth TV touch remote.</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Marmot TV Remote helps you control Android TV and TV boxes with touchpad gestures, fast typing, screen tools, and app management from one phone.</p>
+                <div class="hero-actions" id="download">
+                    <a class="store-button store-button-primary" href="https://apps.apple.com/app/id6804331547" target="_blank" rel="noopener" data-i18n-attr="aria-label:download.iosAria">
+                        <img src="/img/apple.svg" alt="" width="24" height="24">
+                        <span data-i18n="download.ios">Download on the App Store</span>
+                    </a>
+                    <a class="store-button store-button-secondary" href="https://play.google.com/store/apps/details?id=com.vonchange.marmot.intl" target="_blank" rel="noopener" data-i18n-attr="aria-label:download.androidAria">
+                        <img src="/img/android.svg" alt="" width="24" height="24">
+                        <span data-i18n="download.android">Get it on Google Play</span>
+                    </a>
+                </div>
+                <p class="release-note" data-i18n="download.note">iOS launches first. Android support is kept ready for Google Play.</p>
+            </div>
+
+            <div class="hero-media" aria-hidden="true">
+                <div class="phone-stack">
+                    <div class="phone-card phone-card-back">
+                        <img src="/img/3.jpg" alt="" width="406" height="878">
+                    </div>
+                    <div class="phone-card phone-card-front">
+                        <img src="/img/01.jpg" alt="" width="406" height="878">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Product highlights">
+            <div class="trust-item">
+                <strong data-i18n="trust.touch.title">Touchpad first</strong>
+                <span data-i18n="trust.touch.desc">Swipe, tap, and move the TV cursor naturally.</span>
+            </div>
+            <div class="trust-item">
+                <strong data-i18n="trust.input.title">Fast typing</strong>
+                <span data-i18n="trust.input.desc">Enter search terms, accounts, and passwords on your phone.</span>
+            </div>
+            <div class="trust-item">
+                <strong data-i18n="trust.setup.title">Simple setup</strong>
+                <span data-i18n="trust.setup.desc">Connect on the same Wi-Fi after enabling ADB on the TV.</span>
+            </div>
+        </section>
+
+        <section class="core-capabilities" aria-label="Core capabilities">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="core.eyebrow">Two core capabilities</p>
+                <h2 data-i18n="core.title">Touch control and real-time typing are the heart of Marmot.</h2>
+                <p data-i18n="core.subtitle">These two flows make a TV feel closer to a touch screen, without changing the TV itself.</p>
+            </div>
+            <div class="core-grid">
+                <article class="core-card">
+                    <div class="core-card-copy">
+                        <h3 data-i18n="core.touch.title">Touchpad-style TV control</h3>
+                        <p data-i18n="core.touch.desc">Swipe on the phone and the big-screen pointer follows. Tap, select, and move around the TV interface with a natural touchpad feel.</p>
+                    </div>
+                    <div class="core-media">
+                        <img src="/img/1.webp" alt="Touchpad-style TV control demo" width="800" height="450" loading="lazy" decoding="async" data-i18n-attr="alt:core.touch.alt">
+                    </div>
+                </article>
+                <article class="core-card">
+                    <div class="core-card-copy">
+                        <h3 data-i18n="core.input.title">Real-time text input</h3>
+                        <p data-i18n="core.input.desc">Type on your phone and send text to the TV instantly. Searching, signing in, and entering passwords become much easier.</p>
+                    </div>
+                    <div class="core-media">
+                        <img src="/img/2.webp" alt="Real-time text input demo" width="800" height="450" loading="lazy" decoding="async" data-i18n-attr="alt:core.input.alt">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="features.eyebrow">Core experience</p>
+                <h2 data-i18n="features.title">Made for real living-room control.</h2>
+                <p data-i18n="features.subtitle">Keep the phone in your hand and make every big-screen action easier.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">◌</span>
+                    <h3 data-i18n="features.touch.title">Touch remote</h3>
+                    <p data-i18n="features.touch.desc">Use your phone like a large touchpad. Point, click, drag, and navigate TV interfaces without fighting tiny remote buttons.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">Aa</span>
+                    <h3 data-i18n="features.input.title">Real-time input</h3>
+                    <p data-i18n="features.input.desc">Type on your phone and send text to the TV instantly, ideal for search, login, and long passwords.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">ADB</span>
+                    <h3 data-i18n="features.adb.title">ADB tools</h3>
+                    <p data-i18n="features.adb.desc">Manage apps, inspect device information, open tools, and handle common Android TV maintenance tasks.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">TV</span>
+                    <h3 data-i18n="features.screen.title">Screen tools</h3>
+                    <p data-i18n="features.screen.desc">Use practical screen controls and shortcuts when the TV interface is hard to operate from the sofa.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="showcase-section" aria-label="Screenshots">
+            <div class="showcase-copy">
+                <p class="eyebrow" data-i18n="showcase.eyebrow">App screenshots</p>
+                <h2 id="showcaseTitle" data-i18n="showcase.items.0.title">One place for big-screen control</h2>
+                <p id="showcaseDesc" data-i18n="showcase.items.0.desc">TV remote, app tools, and device utilities stay together so you can move quickly.</p>
+                <div class="showcase-dots" id="showcaseDots" role="tablist" aria-label="Screenshot carousel">
+                    <button class="showcase-dot is-active" type="button" role="tab" aria-selected="true" data-index="0"></button>
+                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="1"></button>
+                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="2"></button>
+                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="3"></button>
+                </div>
+            </div>
+            <div class="showcase-phone">
+                <img id="showcaseImage" src="/img/01.jpg" alt="Marmot TV Remote home screen" width="406" height="878">
+            </div>
+        </section>
+
+        <section class="section muted">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="steps.eyebrow">How it works</p>
+                <h2 data-i18n="steps.title">Three steps to start.</h2>
+            </div>
+            <div class="steps">
+                <article class="step-card">
+                    <span class="step-number">1</span>
+                    <h3 data-i18n="steps.download.title">Install the app</h3>
+                    <p data-i18n="steps.download.desc">Install Marmot TV Remote on your iPhone or Android phone.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">2</span>
+                    <h3 data-i18n="steps.adb.title">Enable ADB</h3>
+                    <p data-i18n="steps.adb.desc">Enable ADB debugging on your Android TV or TV box and keep both devices on the same Wi-Fi.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">3</span>
+                    <h3 data-i18n="steps.control.title">Connect and control</h3>
+                    <p data-i18n="steps.control.desc">Discover the device in the app and start using touch control, input, and TV tools.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+                <h2 data-i18n="faq.title">A few useful answers.</h2>
+            </div>
+            <div class="faq-list">
+                <article class="faq-item">
+                    <h3 data-i18n="faq.items.0.q">Is Marmot a TV remote or an ADB tool?</h3>
+                    <p data-i18n="faq.items.0.a">Both. The phone app gives you a touch remote and fast typing, while ADB enables deeper TV tools such as app management and device utilities.</p>
+                </article>
+                <article class="faq-item">
+                    <h3 data-i18n="faq.items.1.q">Which devices are supported?</h3>
+                    <p data-i18n="faq.items.1.a">Most Android TV devices, smart TVs, and TV boxes that allow ADB debugging can be used. The phone app supports iOS and Android.</p>
+                </article>
+                <article class="faq-item">
+                    <h3 data-i18n="faq.items.2.q">Does it replace every TV remote?</h3>
+                    <p data-i18n="faq.items.2.a">It is designed for Android TV control through network and ADB features. Device compatibility depends on the TV system and enabled permissions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="support-section" id="support">
+            <div>
+                <p class="eyebrow" data-i18n="support.eyebrow">Support</p>
+                <h2 data-i18n="support.title">Need help with setup?</h2>
+                <p data-i18n="support.desc">Read the guide, check privacy information, or contact us by email.</p>
+            </div>
+            <div class="support-actions">
+                <a class="support-link" href="https://github.com/VonChange/marmot-help/tree/main/en" target="_blank" rel="noopener" data-i18n="support.help">Help center</a>
+                <a class="support-link" href="/marmot/1.html" data-i18n="support.privacy">Privacy policy</a>
+                <a class="support-link" href="mailto:vonchange@163.com" data-i18n="support.email">Email support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <img src="/img/marmot.png?tvImg=1" alt="" width="28" height="28">
+            <span data-i18n="brand.name">Marmot TV Remote</span>
+        </div>
+        <p data-i18n="footer.copyright">© 2026 Marmot TV Remote. All rights reserved.</p>
+    </footer>
+
+    <script src="js/i18n-messages.js"></script>
+    <script>
+    (function () {
+        var storageKey = 'marmot-web-language';
+
+        var translations = window.MARMOT_I18N_MESSAGES || {};
+        var languageOptions = window.MARMOT_I18N_LANGUAGES || Object.keys(translations).map(function (code) {
+            return { code: code, label: code };
+        });
+        var supportedLanguages = languageOptions.map(function (language) {
+            return language.code;
+        });
+
+        var showcaseImages = ['/img/01.jpg', '/img/3.jpg', '/img/4.jpg', '/img/6.jpg'];
+        var activeShowcaseIndex = 0;
+        var activeLanguage = 'en';
+        var showcaseTimer = null;
+        var SHOWCASE_INTERVAL_MS = 3000;
+
+        function getValue(source, path) {
+            return path.split('.').reduce(function (current, key) {
+                return current && current[key] !== undefined ? current[key] : undefined;
+            }, source);
+        }
+
+        function resolveLanguage(rawLanguage) {
+            if (!rawLanguage) return 'en';
+            if (supportedLanguages.indexOf(rawLanguage) >= 0) return rawLanguage;
+            var lower = rawLanguage.toLowerCase();
+            if (lower.indexOf('zh') === 0) return 'zh-CN';
+            if (lower.indexOf('ja') === 0) return 'ja';
+            if (lower.indexOf('ko') === 0) return 'ko';
+            return 'en';
+        }
+
+        function getRequestedLanguage() {
+            var params = new URLSearchParams(window.location.search);
+            return resolveLanguage(params.get('lang') || window.localStorage.getItem(storageKey));
+        }
+
+        function renderLanguageOptions() {
+            var select = document.getElementById('languageSelect');
+            if (!select) return;
+            select.innerHTML = '';
+            languageOptions.forEach(function (language) {
+                var option = document.createElement('option');
+                option.value = language.code;
+                option.textContent = language.label;
+                select.appendChild(option);
+            });
+        }
+
+        function applyAttributes(locale) {
+            document.documentElement.lang = locale;
+            document.title = translations[locale].meta.title;
+            setMeta('description', translations[locale].meta.description);
+            setMeta('keywords', translations[locale].meta.keywords);
+            setMetaProperty('og:title', translations[locale].meta.title);
+            setMetaProperty('og:description', translations[locale].meta.description);
+            setMetaProperty('og:locale', translations[locale].meta.ogLocale);
+            setMetaName('twitter:title', translations[locale].meta.title);
+            setMetaName('twitter:description', translations[locale].meta.description);
+        }
+
+        function setMeta(name, value) {
+            setMetaName(name, value);
+        }
+
+        function setMetaName(name, value) {
+            var el = document.querySelector('meta[name="' + name + '"]');
+            if (el) el.setAttribute('content', value);
+        }
+
+        function setMetaProperty(property, value) {
+            var el = document.querySelector('meta[property="' + property + '"]');
+            if (el) el.setAttribute('content', value);
+        }
+
+        function applyText(locale) {
+            var dictionary = translations[locale];
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var value = getValue(dictionary, el.dataset.i18n);
+                if (value !== undefined) el.textContent = value;
+            });
+            document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+                el.dataset.i18nAttr.split(',').forEach(function (pair) {
+                    var parts = pair.split(':');
+                    var attr = parts[0];
+                    var key = parts[1];
+                    var value = getValue(dictionary, key);
+                    if (attr && value !== undefined) el.setAttribute(attr, value);
+                });
+            });
+        }
+
+        function updateLanguageSelect(locale) {
+            var select = document.getElementById('languageSelect');
+            if (select) select.value = locale;
+        }
+
+        function updateShowcase(index) {
+            var items = translations[activeLanguage].showcase.items;
+            activeShowcaseIndex = (index + items.length) % items.length;
+            var item = items[activeShowcaseIndex];
+            document.getElementById('showcaseTitle').textContent = item.title;
+            document.getElementById('showcaseDesc').textContent = item.desc;
+            var img = document.getElementById('showcaseImage');
+            img.src = showcaseImages[activeShowcaseIndex];
+            img.alt = item.alt;
+            document.querySelectorAll('.showcase-dot').forEach(function (dot) {
+                var active = Number(dot.dataset.index) === activeShowcaseIndex;
+                dot.classList.toggle('is-active', active);
+                dot.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+        }
+
+        function setLanguage(locale) {
+            activeLanguage = resolveLanguage(locale);
+            applyAttributes(activeLanguage);
+            applyText(activeLanguage);
+            updateLanguageSelect(activeLanguage);
+            updateShowcase(activeShowcaseIndex);
+            window.localStorage.setItem(storageKey, activeLanguage);
+        }
+
+        function nextShowcase() {
+            updateShowcase(activeShowcaseIndex + 1);
+        }
+
+        function startShowcaseAutoPlay() {
+            stopShowcaseAutoPlay();
+            showcaseTimer = window.setInterval(nextShowcase, SHOWCASE_INTERVAL_MS);
+        }
+
+        function stopShowcaseAutoPlay() {
+            if (showcaseTimer) {
+                window.clearInterval(showcaseTimer);
+                showcaseTimer = null;
+            }
+        }
+
+        var languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', function () {
+                setLanguage(languageSelect.value);
+            });
+        }
+
+        document.querySelectorAll('.showcase-dot').forEach(function (dot) {
+            dot.addEventListener('click', function () {
+                updateShowcase(Number(dot.dataset.index));
+                startShowcaseAutoPlay();
+            });
+        });
+
+        renderLanguageOptions();
+        setLanguage(getRequestedLanguage());
+        startShowcaseAutoPlay();
+    })();
+    </script>
+</body>
+
+</html>

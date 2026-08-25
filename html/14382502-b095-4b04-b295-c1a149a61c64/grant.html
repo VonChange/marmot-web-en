@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赠送永久会员</title>
+    <link rel="icon" type="image/png" href="../img/marmot.png">
+    <style>
+        :root {
+            --bg: #f3ede0;
+            --panel: rgba(255, 252, 245, 0.92);
+            --panel-strong: #fffaf0;
+            --line: rgba(120, 89, 42, 0.16);
+            --text: #2d2418;
+            --muted: #78644a;
+            --accent: #9d5729;
+            --accent-strong: #7e421a;
+            --success-bg: #e6f6ea;
+            --success-text: #19653d;
+            --warn-bg: #fff3da;
+            --warn-text: #8a5a00;
+            --error-bg: #ffe3df;
+            --error-text: #a02f22;
+            --shadow: 0 18px 50px rgba(79, 52, 21, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(227, 191, 132, 0.45), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(171, 104, 55, 0.22), transparent 25%),
+                linear-gradient(135deg, #f7f0e2 0%, #efe4cf 44%, #f4edde 100%);
+            min-height: 100vh;
+            padding: 24px 16px 40px;
+        }
+
+        .shell {
+            width: min(720px, 100%);
+            margin: 0 auto;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            background: linear-gradient(145deg, rgba(87, 53, 20, 0.95), rgba(128, 71, 25, 0.9));
+            color: #fff8ef;
+            padding: 26px 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -40px -48px auto;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(255, 214, 153, 0.3), transparent 68%);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            font-size: 13px;
+            letter-spacing: 0.04em;
+        }
+
+        h1 {
+            margin: 16px 0 10px;
+            font-size: clamp(28px, 5vw, 42px);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            margin: 0;
+            max-width: 520px;
+            line-height: 1.7;
+            color: rgba(255, 248, 239, 0.86);
+        }
+
+        .panel {
+            margin-top: 18px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 24px;
+        }
+
+        .section + .section {
+            border-top: 1px solid var(--line);
+        }
+
+        .section-title {
+            margin: 0 0 8px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .section-desc {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .field {
+            margin-top: 18px;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        .field input {
+            width: 100%;
+            border: 1px solid rgba(120, 89, 42, 0.22);
+            border-radius: 16px;
+            padding: 16px 18px;
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            background: var(--panel-strong);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .field input:focus {
+            border-color: rgba(157, 87, 41, 0.52);
+            box-shadow: 0 0 0 4px rgba(157, 87, 41, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .tips {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+        }
+
+        button:hover:not(:disabled) {
+            transform: translateY(-1px);
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .primary-btn {
+            min-width: 180px;
+            padding: 15px 22px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+            color: #fff8ef;
+            box-shadow: 0 12px 24px rgba(125, 66, 26, 0.24);
+        }
+
+        .ghost-btn {
+            min-width: 120px;
+            padding: 15px 20px;
+            background: rgba(255, 250, 240, 0.75);
+            color: var(--accent-strong);
+            border: 1px solid rgba(125, 66, 26, 0.16);
+        }
+
+        .status-card {
+            display: none;
+            margin-top: 22px;
+            border-radius: 18px;
+            padding: 18px 18px 16px;
+            line-height: 1.7;
+            border: 1px solid transparent;
+        }
+
+        .status-card.show {
+            display: block;
+        }
+
+        .status-card.success {
+            background: var(--success-bg);
+            color: var(--success-text);
+            border-color: rgba(25, 101, 61, 0.14);
+        }
+
+        .status-card.warn {
+            background: var(--warn-bg);
+            color: var(--warn-text);
+            border-color: rgba(138, 90, 0, 0.14);
+        }
+
+        .status-card.error {
+            background: var(--error-bg);
+            color: var(--error-text);
+            border-color: rgba(160, 47, 34, 0.14);
+        }
+
+        .status-title {
+            margin: 0 0 8px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .status-message {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 14px;
+            margin-top: 14px;
+        }
+
+        .result-item {
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.62);
+        }
+
+        .result-label {
+            display: block;
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+
+        .result-value {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            word-break: break-all;
+        }
+
+        .footer-note {
+            margin-top: 18px;
+            font-size: 12px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .modal-mask {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(41, 27, 15, 0.42);
+            backdrop-filter: blur(6px);
+            z-index: 40;
+        }
+
+        .modal-mask.show {
+            display: flex;
+        }
+
+        .modal {
+            width: min(460px, 100%);
+            border-radius: 24px;
+            border: 1px solid var(--line);
+            background: rgba(255, 251, 244, 0.98);
+            box-shadow: 0 26px 60px rgba(54, 33, 14, 0.2);
+            overflow: hidden;
+        }
+
+        .modal-head {
+            padding: 22px 22px 10px;
+        }
+
+        .modal-title {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .modal-body {
+            padding: 0 22px 18px;
+            color: var(--muted);
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        .modal-highlight {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 10px;
+            border-radius: 12px;
+            background: rgba(157, 87, 41, 0.08);
+            color: var(--accent-strong);
+            font-weight: 700;
+            word-break: break-all;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            padding: 0 22px 22px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 14px 12px 32px;
+            }
+
+            .hero,
+            .section {
+                padding: 20px 18px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .primary-btn,
+            .ghost-btn {
+                width: 100%;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-actions {
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <section class="hero">
+            <div class="eyebrow">运营工具 / 永久会员发放</div>
+            <h1>按优惠码赠送永久会员</h1>
+            <p>输入用户“我的优惠码”，直接调用管理员接口发放永久会员。支持手机端和桌面端直接打开使用。</p>
+        </section>
+
+        <section class="panel">
+            <div class="section">
+                <h2 class="section-title">发放表单</h2>
+                <p class="section-desc">优惠码为空时不允许提交。提交前会二次确认，避免误操作。</p>
+
+                <div class="field">
+                    <label for="promo-code">用户优惠码</label>
+                    <input id="promo-code" type="text" placeholder="请输入用户“我的优惠码”" autocomplete="off">
+                </div>
+
+                <div class="tips">
+                    结果说明：
+                    发放成功会显示目标用户主体和设备；如果用户已经是永久会员，会返回幂等成功，不会重复发放。
+                </div>
+
+                <div class="actions">
+                    <button id="submit-btn" class="primary-btn" type="button">赠送永久会员</button>
+                    <button id="clear-btn" class="ghost-btn" type="button">清空</button>
+                </div>
+
+                <div id="status-card" class="status-card" aria-live="polite">
+                    <h3 id="status-title" class="status-title"></h3>
+                    <p id="status-message" class="status-message"></p>
+                    <div id="result-grid" class="result-grid" style="display: none;">
+                        <div class="result-item">
+                            <span class="result-label">优惠码</span>
+                            <span id="result-code" class="result-value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">用户主体</span>
+                            <span id="result-member" class="result-value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">当前设备</span>
+                            <span id="result-device" class="result-value"></span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">本次是否实际发放</span>
+                            <span id="result-granted" class="result-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-note">UUID 隐藏页，仅用于内部运营操作。</div>
+    </div>
+
+    <div id="confirm-mask" class="modal-mask" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+            <div class="modal-head">
+                <h3 id="confirm-title" class="modal-title">确认赠送永久会员</h3>
+            </div>
+            <div class="modal-body">
+                确认要给该优惠码对应的用户赠送永久会员吗？
+                <div id="confirm-code" class="modal-highlight"></div>
+            </div>
+            <div class="modal-actions">
+                <button id="confirm-cancel-btn" class="ghost-btn" type="button">取消</button>
+                <button id="confirm-submit-btn" class="primary-btn" type="button">确认发放</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = "https://api.vonchange.com/marmot";
+        const ADMIN_TOKEN = "D0997CA5-E273-47A2-AE2D-4617837C8351";
+
+        const promoCodeInput = document.getElementById("promo-code");
+        const submitBtn = document.getElementById("submit-btn");
+        const clearBtn = document.getElementById("clear-btn");
+        const statusCard = document.getElementById("status-card");
+        const statusTitle = document.getElementById("status-title");
+        const statusMessage = document.getElementById("status-message");
+        const resultGrid = document.getElementById("result-grid");
+        const resultCode = document.getElementById("result-code");
+        const resultMember = document.getElementById("result-member");
+        const resultDevice = document.getElementById("result-device");
+        const resultGranted = document.getElementById("result-granted");
+        const confirmMask = document.getElementById("confirm-mask");
+        const confirmCode = document.getElementById("confirm-code");
+        const confirmCancelBtn = document.getElementById("confirm-cancel-btn");
+        const confirmSubmitBtn = document.getElementById("confirm-submit-btn");
+
+        let pendingCode = "";
+
+        function setLoading(loading) {
+            submitBtn.disabled = loading;
+            promoCodeInput.disabled = loading;
+            clearBtn.disabled = loading;
+            submitBtn.textContent = loading ? "发放中..." : "赠送永久会员";
+            confirmSubmitBtn.disabled = loading;
+            confirmCancelBtn.disabled = loading;
+        }
+
+        function openConfirmModal(code) {
+            pendingCode = code;
+            confirmCode.textContent = `优惠码：${code}`;
+            confirmMask.classList.add("show");
+            confirmMask.setAttribute("aria-hidden", "false");
+        }
+
+        function closeConfirmModal() {
+            confirmMask.classList.remove("show");
+            confirmMask.setAttribute("aria-hidden", "true");
+        }
+
+        function hideStatus() {
+            statusCard.className = "status-card";
+            statusTitle.textContent = "";
+            statusMessage.textContent = "";
+            resultGrid.style.display = "none";
+        }
+
+        function showStatus(type, title, message, data) {
+            statusCard.className = `status-card show ${type}`;
+            statusTitle.textContent = title;
+            statusMessage.textContent = message;
+
+            if (!data) {
+                resultGrid.style.display = "none";
+                return;
+            }
+
+            resultCode.textContent = data.promo_code || "-";
+            resultMember.textContent = data.owner_member_id || "-";
+            resultDevice.textContent = data.app_device_id || "-";
+            resultGranted.textContent = data.granted ? "是" : "否";
+            resultGrid.style.display = "grid";
+        }
+
+        async function grantPermanent() {
+            const code = promoCodeInput.value.trim();
+            if (!code) {
+                showStatus("error", "无法提交", "请先输入用户优惠码。");
+                promoCodeInput.focus();
+                return;
+            }
+
+            openConfirmModal(code);
+        }
+
+        async function confirmGrantPermanent() {
+            const code = pendingCode.trim();
+            if (!code) {
+                closeConfirmModal();
+                return;
+            }
+
+            setLoading(true);
+            hideStatus();
+            closeConfirmModal();
+
+            try {
+                const response = await fetch(`${API_BASE}/v1/admin/promo/grant-permanent-by-code`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-Admin-Token": ADMIN_TOKEN
+                    },
+                    body: JSON.stringify({ code })
+                });
+
+                const result = await response.json();
+                if (!response.ok || result.code !== 0) {
+                    throw new Error(result.message || "请求失败");
+                }
+
+                const data = result.data || {};
+                if (data.already_permanent) {
+                    showStatus(
+                        "warn",
+                        "已是永久会员",
+                        "该用户已经是永久会员，本次未重复发放。",
+                        data
+                    );
+                } else {
+                    showStatus(
+                        "success",
+                        "发放成功",
+                        "永久会员已成功发放给该优惠码对应用户。",
+                        data
+                    );
+                }
+
+                try {
+                    localStorage.setItem("marmot-last-grant-promo-code", code);
+                } catch (error) {
+                    console.warn("保存最近一次优惠码失败", error);
+                }
+            } catch (error) {
+                showStatus(
+                    "error",
+                    "发放失败",
+                    error instanceof Error ? error.message : "网络异常，请稍后重试。"
+                );
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        submitBtn.addEventListener("click", grantPermanent);
+        confirmSubmitBtn.addEventListener("click", confirmGrantPermanent);
+        confirmCancelBtn.addEventListener("click", closeConfirmModal);
+
+        confirmMask.addEventListener("click", (event) => {
+            if (event.target === confirmMask && !confirmSubmitBtn.disabled) {
+                closeConfirmModal();
+            }
+        });
+
+        promoCodeInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                grantPermanent();
+            }
+        });
+
+        window.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && confirmMask.classList.contains("show") && !confirmSubmitBtn.disabled) {
+                closeConfirmModal();
+            }
+        });
+
+        clearBtn.addEventListener("click", () => {
+            promoCodeInput.value = "";
+            hideStatus();
+            promoCodeInput.focus();
+        });
+
+        window.addEventListener("DOMContentLoaded", () => {
+            try {
+                const lastCode = localStorage.getItem("marmot-last-grant-promo-code");
+                if (lastCode) {
+                    promoCodeInput.value = lastCode;
+                }
+            } catch (error) {
+                console.warn("读取最近一次优惠码失败", error);
+            }
+        });
+    </script>
+</body>
+
+</html>

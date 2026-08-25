@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付完成 - 土拨鼠遥控</title>
+    <link rel="icon" type="image/png" href="../img/marmot.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #2f2419;
+            background:
+                radial-gradient(circle at top, rgba(255, 214, 153, 0.42), transparent 32%),
+                linear-gradient(180deg, #fff9ef 0%, #f7efe1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 720px;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid rgba(226, 191, 132, 0.7);
+            border-radius: 28px;
+            box-shadow: 0 28px 70px rgba(120, 82, 31, 0.14);
+            overflow: hidden;
+        }
+
+        .hero {
+            padding: 30px 28px 24px;
+            background: linear-gradient(135deg, #fff3d3 0%, #ffe2ab 100%);
+            border-bottom: 1px solid rgba(226, 191, 132, 0.7);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .brand img {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(183, 130, 49, 0.22);
+        }
+
+        .brand-name {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 34px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #6c5132;
+        }
+
+        .content {
+            padding: 28px;
+        }
+
+        .notice {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 18px 18px 16px;
+            background: #fff8eb;
+            border: 1px solid #f0d9ae;
+            border-radius: 18px;
+            margin-bottom: 22px;
+        }
+
+        .notice-icon {
+            flex: 0 0 auto;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f8c159 0%, #e59c2d 100%);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .notice strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 17px;
+        }
+
+        .notice p {
+            margin: 0;
+            color: #6c5132;
+            line-height: 1.7;
+        }
+
+        .tip {
+            padding: 16px 18px;
+            border-radius: 16px;
+            background: #f6f0ff;
+            border: 1px solid #decdf8;
+            color: #5c417e;
+            line-height: 1.7;
+            margin-bottom: 26px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            appearance: none;
+            border: none;
+            border-radius: 999px;
+            padding: 14px 22px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            color: #fff;
+            background: linear-gradient(135deg, #3a2a17 0%, #7b4d19 100%);
+            box-shadow: 0 14px 32px rgba(82, 53, 22, 0.2);
+        }
+
+        .btn-secondary {
+            color: #5a4327;
+            background: #fff7e5;
+            border: 1px solid #ecd2a6;
+        }
+
+        .footer {
+            margin-top: 22px;
+            color: #826c52;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+
+            .hero,
+            .content {
+                padding: 22px 18px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <section class="hero">
+            <div class="brand">
+                <img src="../img/marmot.png" alt="土拨鼠遥控">
+                <div class="brand-name">土拨鼠遥控</div>
+            </div>
+            <h1>支付已完成</h1>
+            <p class="subtitle">
+                返回土拨鼠遥控即可，会员状态一般会在几秒内自动更新。
+            </p>
+        </section>
+
+        <section class="content">
+            <div class="notice">
+                <div class="notice-icon">✓</div>
+                <div>
+                    <strong>回到土拨鼠遥控 App 即可</strong>
+                    <p>会自动确认支付结果</p>
+                </div>
+            </div>
+
+            <div class="tip">
+                如果短时间内还没更新，可点击支付状态查询按钮手动查询。
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-primary" type="button" onclick="window.history.back();">返回上一页</button>
+                <a class="btn btn-secondary" href="https://www.vonchange.com" target="_self">前往官网首页</a>
+            </div>
+
+            <div class="footer">
+                
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

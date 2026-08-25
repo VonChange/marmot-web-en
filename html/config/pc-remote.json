@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "mac": {
+    "enabled": true,
+    "versionName": "2026.8.1",
+    "releaseDate": "2026-08-01",
+    "description": "重构首版",
+    "registry": "swr.cn-east-3.myhuaweicloud.com",
+    "namespace": "vonchange",
+    "name": "marmot-pc-remote-mac",
+    "tag": "v2026.8.1"
+  },
+  "macX64": {
+    "enabled": false,
+    "versionName": "2026.8.1",
+    "releaseDate": "2026-08-06",
+    "description": "新增 Intel Mac 在线升级支持",
+    "registry": "swr.cn-east-3.myhuaweicloud.com",
+    "namespace": "vonchange",
+    "name": "marmot-pc-remote-mac-x86",
+    "tag": "v2026.8.1"
+  },
+  "win": {
+    "enabled": true,
+    "versionName": "2026.8.1",
+    "releaseDate": "2026-08-05",
+    "description": "重构首版",
+    "registry": "swr.cn-east-3.myhuaweicloud.com",
+    "namespace": "vonchange",
+    "name": "marmot-pc-remote-win",
+    "tag": "v2026.8.1"
+  },
+  "linux": {
+    "enabled": false,
+    "versionName": "0.1.0",
+    "releaseDate": "2026-07-30",
+    "description": "电脑遥控服务首个版本",
+    "registry": "swr.cn-east-3.myhuaweicloud.com",
+    "namespace": "vonchange",
+    "name": "marmot-pc-remote-linux",
+    "tag": "v0.1.0"
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优惠码分享 - 土拨鼠电视助手</title>
+    <link rel="icon" type="image/png" href="../img/marmot.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-solid">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../img/marmot.png" alt="土拨鼠" class="logo-icon">
+                <span class="logo-text">土拨鼠电视助手</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="promo-page">
+        <div class="promo-container">
+            <div class="promo-header">
+                <h1 class="promo-title">优惠码分享</h1>
+                <p class="promo-subtitle">使用优惠码订阅可享受优惠价格</p>
+                <div class="promo-desc">
+                    这是首批种子用户的分享码，被他人使用后他们将获得永久会员。您同样可以通过分享自己的优惠码来锁定永久会员！
+                </div>
+            </div>
+
+            <!-- 加载状态 -->
+            <div id="loading" class="promo-loading">
+                <div class="loading-spinner"></div>
+                <p>加载中...</p>
+            </div>
+
+            <!-- 错误提示 -->
+            <div id="error" class="promo-error" style="display: none;">
+                <p id="error-message">加载失败，请稍后重试</p>
+                <button onclick="loadPromoCodes()" class="retry-btn">重试</button>
+            </div>
+
+            <!-- 空状态 -->
+            <div id="empty" class="promo-empty" style="display: none;">
+                <p>暂无可用优惠码</p>
+            </div>
+
+            <!-- 优惠码列表 -->
+            <div id="promo-list" class="promo-list" style="display: none;"></div>
+        </div>
+
+        <!-- Toast 提示 -->
+        <div id="toast" class="toast"></div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../img/marmot.png" alt="土拨鼠">
+                <span>土拨鼠电视助手</span>
+            </div>
+            <p class="copyright">© 2026 土拨鼠电视助手 - All Rights Reserved</p>
+            <p class="icp"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鲁ICP备20022988号</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // API 基础地址
+        const API_BASE = 'https://api.vonchange.com/marmot';
+
+        // 页面加载时获取优惠码列表
+        document.addEventListener('DOMContentLoaded', loadPromoCodes);
+
+        // 加载优惠码列表
+        async function loadPromoCodes() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const empty = document.getElementById('empty');
+            const list = document.getElementById('promo-list');
+
+            // 显示加载状态
+            loading.style.display = 'flex';
+            error.style.display = 'none';
+            empty.style.display = 'none';
+            list.style.display = 'none';
+
+            try {
+                const response = await fetch(`${API_BASE}/v1/promo/available-codes`);
+                const result = await response.json();
+
+                loading.style.display = 'none';
+
+                if (result.code !== 0) {
+                    throw new Error(result.message || '获取优惠码失败');
+                }
+
+                const codes = result.data?.codes || [];
+
+                if (codes.length === 0) {
+                    empty.style.display = 'flex';
+                    return;
+                }
+
+                // 渲染优惠码列表
+                renderPromoCodes(codes);
+                list.style.display = 'block';
+
+            } catch (err) {
+                loading.style.display = 'none';
+                error.style.display = 'flex';
+                document.getElementById('error-message').textContent = err.message || '加载失败，请稍后重试';
+            }
+        }
+
+        // 渲染优惠码列表
+        function renderPromoCodes(codes) {
+            const list = document.getElementById('promo-list');
+            list.innerHTML = codes.map((item, index) => `
+                <div class="promo-item" style="animation-delay: ${index * 0.05}s">
+                    <div class="promo-info">
+                        <span class="promo-code">${escapeHtml(item.code)}</span>
+                        <span class="promo-progress">${item.used_count}/${item.target_count} 人已使用</span>
+                    </div>
+                    <button class="copy-btn" onclick="copyCode('${escapeHtml(item.code)}', this)">
+                        复制
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // 复制优惠码
+        async function copyCode(code, btn) {
+            try {
+                await navigator.clipboard.writeText(code);
+                showToast('复制成功');
+
+                // 按钮反馈
+                const originalText = btn.textContent;
+                btn.textContent = '已复制';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 1500);
+
+            } catch (err) {
+                // 降级方案：使用 execCommand
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+
+                try {
+                    document.execCommand('copy');
+                    showToast('复制成功');
+                } catch (e) {
+                    showToast('复制失败，请手动复制');
+                }
+
+                document.body.removeChild(textArea);
+            }
+        }
+
+        // 显示 Toast 提示
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // HTML 转义，防止 XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+
+</html>
