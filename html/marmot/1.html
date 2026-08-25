@@ -1,312 +1,317 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 土拨鼠电视助手</title>
-    <link rel="icon" type="image/png" href="../image/marmot_128x128.png">
+    <title>Privacy Policy - Marmot TV Remote</title>
+    <link rel="icon" type="image/png" href="/img/marmot.png?tvImg=1">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
             min-height: 100vh;
+            color: #17211b;
+            background: linear-gradient(135deg, #f7faf7 0%, #edf5ef 100%);
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
         }
-        
+
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+
         .header {
+            padding: 32px;
+            border-radius: 12px;
+            color: #fff;
+            background: linear-gradient(135deg, #2f7d52 0%, #1d5c3a 100%);
+            box-shadow: 0 18px 50px rgba(47, 125, 82, 0.24);
             text-align: center;
-            margin-bottom: 40px;
-            padding: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 16px;
-            color: white;
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
         }
-        
+
         .header h1 {
+            margin-bottom: 8px;
             font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+            line-height: 1.2;
         }
-        
-        .header .app-name {
-            font-size: 1.1rem;
+
+        .header p {
             opacity: 0.9;
         }
-        
-        .header .entity-info {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            margin-top: 8px;
-        }
-        
+
         .content {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 28px;
+            padding: 38px;
+            border: 1px solid rgba(31, 54, 38, 0.1);
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(20, 32, 25, 0.08);
         }
-        
+
         .notice-box {
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-            border-left: 4px solid #4caf50;
-            padding: 20px;
-            border-radius: 8px;
             margin-bottom: 30px;
+            padding: 18px 20px;
+            border-left: 4px solid #2f7d52;
+            border-radius: 8px;
+            background: #edf8f0;
+            color: #1d5c3a;
         }
-        
-        .notice-box p {
-            color: #2e7d32;
-            font-size: 0.95rem;
+
+        .toc {
+            margin-bottom: 32px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f7faf7;
         }
-        
+
+        .toc h2 {
+            margin-bottom: 12px;
+            color: #39463d;
+            font-size: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin: 8px 0;
+        }
+
+        .toc a {
+            color: #2f7d52;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 34px;
         }
-        
+
         .section h2 {
-            font-size: 1.3rem;
-            color: #667eea;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e9ecef;
             display: flex;
-            align-items: center;
             gap: 10px;
+            align-items: center;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e6ece8;
+            color: #2f7d52;
+            font-size: 1.28rem;
+            line-height: 1.35;
         }
-        
+
         .section h2::before {
             content: "";
             display: inline-block;
             width: 4px;
             height: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 2px;
+            background: #2f7d52;
         }
-        
+
         .section h3 {
-            font-size: 1.1rem;
-            color: #495057;
-            margin: 20px 0 10px;
+            margin: 20px 0 8px;
+            color: #39463d;
+            font-size: 1.05rem;
         }
-        
+
         .section p {
             margin-bottom: 12px;
-            text-align: justify;
         }
-        
-        .section ul, .section ol {
-            margin: 10px 0 15px 20px;
+
+        .section ul {
+            margin: 10px 0 16px 22px;
         }
-        
+
         .section li {
             margin-bottom: 8px;
         }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px 20px;
-            margin: 15px 0;
-        }
-        
+
+        .highlight-box,
         .contact-box {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 20px;
+            margin-top: 14px;
+            padding: 18px 20px;
+            border-radius: 10px;
+            background: #f7faf7;
         }
-        
+
+        .highlight-box p {
+            margin-bottom: 6px;
+        }
+
         .contact-item {
             display: flex;
-            align-items: center;
             gap: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .contact-item span {
-            color: #667eea;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-        
-        .toc {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-        
-        .toc h3 {
-            color: #495057;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-        
-        .toc ul {
-            list-style: none;
-            margin: 0;
-        }
-        
-        .toc li {
+            align-items: flex-start;
             margin-bottom: 8px;
         }
-        
-        .toc a {
-            color: #667eea;
-            text-decoration: none;
-            font-size: 0.95rem;
+
+        .contact-item span {
+            color: #2f7d52;
         }
-        
-        .toc a:hover {
-            text-decoration: underline;
+
+        .contact-item a {
+            color: #2f7d52;
+            font-weight: 600;
         }
-        
-        @media (max-width: 768px) {
+
+        .footer {
+            padding: 26px 0 8px;
+            color: #66736a;
+            font-size: 0.92rem;
+            text-align: center;
+        }
+
+        @media (max-width: 720px) {
             .container {
-                padding: 20px 15px;
+                padding: 22px 14px;
             }
-            
-            .content {
-                padding: 25px;
+
+            .header {
+                padding: 26px 20px;
             }
-            
+
             .header h1 {
-                font-size: 1.6rem;
+                font-size: 1.65rem;
+            }
+
+            .content {
+                padding: 24px 18px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>隐私政策</h1>
-            <p class="app-name">土拨鼠电视助手</p>
-            <p class="entity-info">应用运营方：个人（冯昌义）</p>
-        </div>
-        
-        <div class="content">
+        <header class="header">
+            <h1>Privacy Policy</h1>
+            <p>Marmot TV Remote</p>
+            <p>Operator: Individual developer, Feng Changyi</p>
+            <p>Last updated: August 25, 2026</p>
+        </header>
+
+        <main class="content">
             <div class="notice-box">
-                <p><strong>重要说明：</strong>本应用<strong>无需登录、无需注册</strong>，使用匿名设备标识提供服务，不收集您的姓名、手机号、邮箱等个人身份信息。</p>
+                <p><strong>Important:</strong> Marmot TV Remote does not require account registration or login for its core remote-control features. The app uses anonymous device identifiers to provide subscription, configuration, and related services. We do not collect your name, phone number, or other direct personal identity information for these core features.</p>
             </div>
-            
-            <div class="toc">
-                <h3>目录</h3>
+
+            <nav class="toc" aria-label="Table of contents">
+                <h2>Contents</h2>
                 <ul>
-                    <li><a href="#section1">一、应用简介</a></li>
-                    <li><a href="#section2">二、数据说明</a></li>
-                    <li><a href="#section3">三、权限使用说明</a></li>
-                    <li><a href="#section4">四、数据删除</a></li>
-                    <li><a href="#section5">五、未成年人保护</a></li>
-                    <li><a href="#section6">六、联系我们</a></li>
+                    <li><a href="#section1">1. App Overview</a></li>
+                    <li><a href="#section2">2. Data We Process</a></li>
+                    <li><a href="#section3">3. Permissions</a></li>
+                    <li><a href="#section4">4. Subscriptions and Purchases</a></li>
+                    <li><a href="#section5">5. Data Deletion</a></li>
+                    <li><a href="#section6">6. Children</a></li>
+                    <li><a href="#section7">7. Contact Us</a></li>
                 </ul>
-            </div>
-            
-            <div class="section" id="section1">
-                <h2>一、应用简介</h2>
-                <p><strong>土拨鼠电视助手</strong>是一款智能电视遥控与管理应用，帮助您通过手机控制电视。</p>
+            </nav>
+
+            <section class="section" id="section1">
+                <h2>1. App Overview</h2>
+                <p><strong>Marmot TV Remote</strong> is a TV remote-control and management app that helps you control Android TV devices and TV boxes from your phone.</p>
                 <div class="highlight-box">
-                    <p>✅ 无需注册账号</p>
-                    <p>✅ 无需登录</p>
-                    <p>✅ 不收集个人身份信息</p>
-                    <p>✅ 使用匿名设备标识</p>
+                    <p>No account registration is required for core use.</p>
+                    <p>No login is required for core remote-control features.</p>
+                    <p>Core services use anonymous device identifiers.</p>
+                    <p>Most connection and preference data stays on your device.</p>
                 </div>
-            </div>
-            
-            <div class="section" id="section2">
-                <h2>二、数据说明</h2>
-                
-                <h3>1. 本地存储数据</h3>
-                <p>以下数据仅存储在您的本地设备，不会上传到服务器：</p>
+            </section>
+
+            <section class="section" id="section2">
+                <h2>2. Data We Process</h2>
+
+                <h3>2.1 Data stored locally on your device</h3>
+                <p>The following data is stored locally on your device and is not uploaded to our server for normal use:</p>
                 <ul>
-                    <li>已连接的电视设备信息（IP地址、设备名称等）</li>
-                    <li>应用使用偏好设置</li>
-                    <li>浏览历史记录</li>
+                    <li>Connected TV or device information, such as IP address, device name, and connection records.</li>
+                    <li>App preferences and settings.</li>
+                    <li>Local browsing or tool history created by supported in-app features.</li>
                 </ul>
-                
-                <h3>2. 服务器交互数据</h3>
-                <p>为提供以下功能，应用会与服务器进行数据交互：</p>
+
+                <h3>2.2 Data exchanged with our server</h3>
+                <p>To provide required online services, the app may communicate with our server for:</p>
                 <ul>
-                    <li><strong>订阅服务：</strong>验证订阅状态，使用匿名设备标识</li>
-                    <li><strong>分享功能：</strong>生成和获取分享内容</li>
-                    <li><strong>配置同步：</strong>获取应用配置信息</li>
+                    <li><strong>Subscription status:</strong> verifying whether an anonymous app device is subscribed.</li>
+                    <li><strong>Restore or account binding features:</strong> supporting email-based restore or device binding when you choose to use those features.</li>
+                    <li><strong>Configuration:</strong> retrieving app configuration, version update information, and remote configuration files.</li>
+                    <li><strong>Support and diagnostics:</strong> processing request logs needed to operate and secure the service.</li>
                 </ul>
-                <p>这些交互仅使用匿名设备标识，<strong>不涉及任何个人身份信息</strong>。</p>
-            </div>
-            
-            <div class="section" id="section3">
-                <h2>三、权限使用说明</h2>
-                <p>为实现产品功能，本应用可能需要以下权限：</p>
-                
-                <h3>1. 网络权限（必需）</h3>
-                <p>用于发现局域网内的电视设备并建立连接。</p>
-                
-                <h3>2. WiFi 状态权限（必需）</h3>
-                <p>用于确保手机与电视处于同一局域网。</p>
-                
-                <h3>3. 存储权限（可选）</h3>
-                <p>当您需要推送本地文件到电视时使用。</p>
-                
-                <h3>4. 麦克风权限（可选）</h3>
-                <p>当您使用语音输入功能时使用。</p>
-                
-                <p>您可以随时在系统设置中管理这些权限。</p>
-            </div>
-            
-            <div class="section" id="section4">
-                <h2>四、数据删除</h2>
-                <p>由于所有数据都存储在本地，您可以通过以下方式删除数据：</p>
+                <p>These interactions are designed around anonymous app device identifiers where possible. If you choose to use email restore or binding features, your email address may be processed only for that selected feature.</p>
+            </section>
+
+            <section class="section" id="section3">
+                <h2>3. Permissions</h2>
+                <p>The app may request the following permissions to provide product features:</p>
+
+                <h3>3.1 Network access</h3>
+                <p>Used to discover and connect to TV devices on the same local network and to access required online services.</p>
+
+                <h3>3.2 Local network or Wi-Fi state</h3>
+                <p>Used to check whether your phone and TV are on the same network and to support device discovery.</p>
+
+                <h3>3.3 Storage or media access</h3>
+                <p>Used only when you choose to send local files, photos, or media to a TV device.</p>
+
+                <h3>3.4 Microphone</h3>
+                <p>Used only when you choose to use voice input features.</p>
+
+                <p>You can manage permissions at any time in your system settings.</p>
+            </section>
+
+            <section class="section" id="section4">
+                <h2>4. Subscriptions and Purchases</h2>
+                <p>If you purchase a subscription or lifetime membership through Apple App Store or Google Play, payment processing is handled by the corresponding platform. We receive purchase and subscription status information needed to activate and verify your membership.</p>
+                <p>We do not receive your full payment card details from Apple or Google.</p>
+            </section>
+
+            <section class="section" id="section5">
+                <h2>5. Data Deletion</h2>
+                <p>You can delete local app data by:</p>
                 <ul>
-                    <li>在应用设置中清除本地数据</li>
-                    <li>直接卸载应用</li>
+                    <li>Clearing local data in the app settings, if available.</li>
+                    <li>Deleting connection records inside the app, if available.</li>
+                    <li>Uninstalling the app from your device.</li>
                 </ul>
-                <p>卸载应用后，所有本地存储的数据将被完全删除。</p>
-            </div>
-            
-            <div class="section" id="section5">
-                <h2>五、未成年人保护</h2>
-                <p>如您为未满18周岁的未成年人，请在监护人指导下使用本应用。</p>
-            </div>
-            
-            <div class="section" id="section6">
-                <h2>六、联系我们</h2>
-                <p>如您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
-                
+                <p>If you used optional email restore or binding features and want us to delete server-side data associated with your email or anonymous device identifier, please contact us using the email below.</p>
+            </section>
+
+            <section class="section" id="section6">
+                <h2>6. Children</h2>
+                <p>Marmot TV Remote is not directed to children. If you are under the age required by your region to use digital services independently, please use the app under the guidance of a parent or legal guardian.</p>
+            </section>
+
+            <section class="section" id="section7">
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+
                 <div class="contact-box">
                     <div class="contact-item">
-                        <span>📧</span>
-                        <p>电子邮箱：vonchange@163.com</p>
+                        <span>Email:</span>
+                        <p><a href="mailto:vonchange@163.com">vonchange@163.com</a></p>
                     </div>
                     <div class="contact-item">
-                        <span>🌐</span>
-                        <p>官方网站：https://www.vonchange.com</p>
+                        <span>Website:</span>
+                        <p><a href="https://m.utao.tv">https://m.utao.tv</a></p>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2026 土拨鼠电视助手</p>
-        </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Marmot TV Remote. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
