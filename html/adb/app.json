@@ -1,0 +1,42 @@
+{
+  "applicationId": "com.vonchange.marmot.adb",
+  "version": 22,
+  "versionName": "2026.09.07",
+  "releaseDate": "2026-09-08",
+  "announcement": {
+    "title": "New Version Available",
+    "content": "",
+    "forceShow": false,
+    "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
+    "detailText": "View Details"
+  },
+  "features": {
+  },
+  "android": {
+    "buildNumber": 22,
+    "versionName": "2026.09.07",
+    "forceUpdate": false,
+    "announcement": {
+      "title": "Android Update Available",
+      "content": "Fixed known bugs.",
+      "forceShow": false,
+      "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
+      "detailText": "View Details"
+    },
+    "downloadUrl": "",
+    "playStoreUrl": ""
+  },
+  "ios": {
+    "buildNumber": 22,
+    "versionName": "2026.09.07",
+    "appStoreUrl": "https://apps.apple.com/app/id6809703148",
+    "forceUpdate": false,
+    "announcement": {
+      "title": "iOS Update Available",
+      "content": "Fixed known bugs.",
+      "forceShow": false,
+      "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
+      "detailText": "View Details"
+    }
+  }
+}
