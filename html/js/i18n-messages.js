@@ -19,7 +19,7 @@
                     homeAria: 'Marmot TV Remote home',
                     features: 'Features',
                     download: 'Download',
-                    support: 'Support'
+                    support: 'Contact'
                 },
                 hero: {
                     eyebrow: 'Phone-powered TV control',
@@ -90,12 +90,11 @@
                     ]
                 },
                 support: {
-                    eyebrow: 'Support',
-                    title: 'Need help with setup?',
-                    desc: 'Read the guide, check privacy information, or contact us by email.',
-                    help: 'Help center',
-                    privacy: 'Privacy policy',
-                    email: 'Email support'
+                    eyebrow: 'Contact',
+                    title: 'Contact & feedback',
+                    desc: 'Join our Telegram group for questions and feedback.',
+                    telegram: 'Telegram group',
+                    telegramAria: 'Join Marmot TV Remote Telegram group'
                 },
                 footer: { copyright: '© 2026 Marmot TV Remote. All rights reserved.' }
             },
@@ -111,7 +110,7 @@
                     homeAria: 'Marmot TV Remote 首页',
                     features: '功能',
                     download: '下载',
-                    support: '支持'
+                    support: '联系我们'
                 },
                 hero: {
                     eyebrow: '手机驱动的电视控制',
@@ -182,12 +181,11 @@
                     ]
                 },
                 support: {
-                    eyebrow: '支持',
-                    title: '需要安装帮助？',
-                    desc: '可以阅读帮助文档、查看隐私政策，或通过邮件联系我们。',
-                    help: '帮助中心',
-                    privacy: '隐私政策',
-                    email: '邮件支持'
+                    eyebrow: '联系我们',
+                    title: '联系和反馈问题',
+                    desc: '加入 Telegram 群，提问与反馈更方便。',
+                    telegram: 'Telegram 群',
+                    telegramAria: '加入 Marmot TV Remote Telegram 群'
                 },
                 footer: { copyright: '© 2026 Marmot TV Remote. 保留所有权利。' }
             },
@@ -203,7 +201,7 @@
                     homeAria: 'Marmot TV Remote ホーム',
                     features: '機能',
                     download: 'ダウンロード',
-                    support: 'サポート'
+                    support: 'お問い合わせ'
                 },
                 hero: {
                     eyebrow: 'スマホでテレビを操作',
@@ -274,12 +272,11 @@
                     ]
                 },
                 support: {
-                    eyebrow: 'サポート',
-                    title: '設定でお困りですか？',
-                    desc: 'ガイド、プライバシー情報、メールでのお問い合わせをご利用ください。',
-                    help: 'ヘルプセンター',
-                    privacy: 'プライバシーポリシー',
-                    email: 'メールサポート'
+                    eyebrow: 'お問い合わせ',
+                    title: '連絡とフィードバック',
+                    desc: 'Telegram グループで質問やフィードバックを送れます。',
+                    telegram: 'Telegram グループ',
+                    telegramAria: 'Marmot TV Remote の Telegram グループに参加'
                 },
                 footer: { copyright: '© 2026 Marmot TV Remote. All rights reserved.' }
             },
@@ -295,7 +292,7 @@
                     homeAria: 'Marmot TV Remote 홈',
                     features: '기능',
                     download: '다운로드',
-                    support: '지원'
+                    support: '문의하기'
                 },
                 hero: {
                     eyebrow: '휴대폰으로 TV 제어',
@@ -366,12 +363,11 @@
                     ]
                 },
                 support: {
-                    eyebrow: '지원',
-                    title: '설정에 도움이 필요하신가요?',
-                    desc: '가이드를 읽거나 개인정보 정보를 확인하거나 이메일로 문의하세요.',
-                    help: '도움말 센터',
-                    privacy: '개인정보 처리방침',
-                    email: '이메일 지원'
+                    eyebrow: '문의하기',
+                    title: '연락 및 피드백',
+                    desc: 'Telegram 그룹에서 질문과 피드백을 남겨 주세요.',
+                    telegram: 'Telegram 그룹',
+                    telegramAria: 'Marmot TV Remote Telegram 그룹 참여'
                 },
                 footer: { copyright: '© 2026 Marmot TV Remote. All rights reserved.' }
             }
