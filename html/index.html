@@ -99,10 +99,10 @@
             <div class="hero-media" aria-hidden="true">
                 <div class="phone-stack">
                     <div class="phone-card phone-card-back">
-                        <img src="/img/3.jpg" alt="" width="406" height="878">
+                        <img src="/img/utilities.webp" alt="" width="406" height="878">
                     </div>
                     <div class="phone-card phone-card-front">
-                        <img src="/img/01.jpg" alt="" width="406" height="878">
+                        <img src="/img/home.webp" alt="" width="406" height="878">
                     </div>
                 </div>
             </div>
@@ -191,10 +191,12 @@
                     <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="1"></button>
                     <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="2"></button>
                     <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="3"></button>
+                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="4"></button>
+                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="5"></button>
                 </div>
             </div>
             <div class="showcase-phone">
-                <img id="showcaseImage" src="/img/01.jpg" alt="Marmot TV Remote home screen" width="406" height="878">
+                <img id="showcaseImage" src="/img/home.webp" alt="Marmot TV Remote home screen" width="406" height="878">
             </div>
         </section>
 
@@ -278,7 +280,14 @@
             return language.code;
         });
 
-        var showcaseImages = ['/img/01.jpg', '/img/3.jpg', '/img/4.jpg', '/img/6.jpg'];
+        var showcaseImages = [
+            '/img/home.webp',
+            '/img/air-mouse.webp',
+            '/img/tv-remote.webp',
+            '/img/utilities.webp',
+            '/img/screen-control.webp',
+            '/img/app-library.webp'
+        ];
         var activeShowcaseIndex = 0;
         var activeLanguage = 'en';
         var showcaseTimer = null;
