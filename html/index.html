@@ -151,6 +151,67 @@
             </div>
         </section>
 
+        <section class="feature-fan-section" aria-label="App screenshots" id="featureFanSection">
+            <div class="section-heading feature-fan-heading">
+                <h2 data-i18n="showcase.title">Feature overview</h2>
+            </div>
+            <div class="feature-fan">
+                <div class="feature-fan-stage" aria-live="polite">
+                    <div class="feature-fan-phones" id="featureFanPhones">
+                        <button type="button" class="feature-fan-phone" data-index="0" data-pos="center" aria-label="Home">
+                            <div class="feature-fan-frame">
+                                <img class="feature-fan-screen" src="/img/home.webp" alt="" width="406" height="878" loading="eager" decoding="async">
+                            </div>
+                            <span class="feature-fan-label" data-fan-label>Home</span>
+                        </button>
+                        <button type="button" class="feature-fan-phone" data-index="1" data-pos="right" aria-label="Air Mouse">
+                            <div class="feature-fan-frame">
+                                <img class="feature-fan-screen" src="/img/air-mouse.webp" alt="" width="406" height="878" loading="lazy" decoding="async">
+                            </div>
+                            <span class="feature-fan-label" data-fan-label>Air Mouse</span>
+                        </button>
+                        <button type="button" class="feature-fan-phone" data-index="2" data-pos="hidden" aria-label="TV Remote">
+                            <div class="feature-fan-frame">
+                                <img class="feature-fan-screen" src="/img/tv-remote.webp" alt="" width="406" height="878" loading="lazy" decoding="async">
+                            </div>
+                            <span class="feature-fan-label" data-fan-label>TV Remote</span>
+                        </button>
+                        <button type="button" class="feature-fan-phone" data-index="3" data-pos="hidden" aria-label="Utilities">
+                            <div class="feature-fan-frame">
+                                <img class="feature-fan-screen" src="/img/utilities.webp" alt="" width="406" height="878" loading="lazy" decoding="async">
+                            </div>
+                            <span class="feature-fan-label" data-fan-label>Utilities</span>
+                        </button>
+                        <button type="button" class="feature-fan-phone" data-index="4" data-pos="hidden" aria-label="Screen">
+                            <div class="feature-fan-frame">
+                                <img class="feature-fan-screen" src="/img/screen-control.webp" alt="" width="406" height="878" loading="lazy" decoding="async">
+                            </div>
+                            <span class="feature-fan-label" data-fan-label>Screen</span>
+                        </button>
+                        <button type="button" class="feature-fan-phone" data-index="5" data-pos="left" aria-label="Apps">
+                            <div class="feature-fan-frame">
+                                <img class="feature-fan-screen" src="/img/app-library.webp" alt="" width="406" height="878" loading="lazy" decoding="async">
+                            </div>
+                            <span class="feature-fan-label" data-fan-label>Apps</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="feature-fan-copy">
+                    <p class="feature-fan-eyebrow" data-i18n="showcase.liveEyebrow">Real app screens</p>
+                    <h3 class="feature-fan-title" id="featureFanTitle">One place for big-screen control</h3>
+                    <p class="feature-fan-desc" id="featureFanDesc">TV remote, app tools, and device utilities stay together so you can move quickly.</p>
+                    <div class="feature-fan-dots" id="featureFanDots" role="tablist" aria-label="Screenshot carousel">
+                        <button class="feature-fan-dot is-active" type="button" role="tab" aria-selected="true" data-index="0"></button>
+                        <button class="feature-fan-dot" type="button" role="tab" aria-selected="false" data-index="1"></button>
+                        <button class="feature-fan-dot" type="button" role="tab" aria-selected="false" data-index="2"></button>
+                        <button class="feature-fan-dot" type="button" role="tab" aria-selected="false" data-index="3"></button>
+                        <button class="feature-fan-dot" type="button" role="tab" aria-selected="false" data-index="4"></button>
+                        <button class="feature-fan-dot" type="button" role="tab" aria-selected="false" data-index="5"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="features">
             <div class="section-heading">
                 <p class="eyebrow" data-i18n="features.eyebrow">Core experience</p>
@@ -178,25 +239,6 @@
                     <h3 data-i18n="features.screen.title">Screen tools</h3>
                     <p data-i18n="features.screen.desc">Use practical screen controls and shortcuts when the TV interface is hard to operate from the sofa.</p>
                 </article>
-            </div>
-        </section>
-
-        <section class="showcase-section" aria-label="Screenshots">
-            <div class="showcase-copy">
-                <p class="eyebrow" data-i18n="showcase.eyebrow">App screenshots</p>
-                <h2 id="showcaseTitle" data-i18n="showcase.items.0.title">One place for big-screen control</h2>
-                <p id="showcaseDesc" data-i18n="showcase.items.0.desc">TV remote, app tools, and device utilities stay together so you can move quickly.</p>
-                <div class="showcase-dots" id="showcaseDots" role="tablist" aria-label="Screenshot carousel">
-                    <button class="showcase-dot is-active" type="button" role="tab" aria-selected="true" data-index="0"></button>
-                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="1"></button>
-                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="2"></button>
-                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="3"></button>
-                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="4"></button>
-                    <button class="showcase-dot" type="button" role="tab" aria-selected="false" data-index="5"></button>
-                </div>
-            </div>
-            <div class="showcase-phone">
-                <img id="showcaseImage" src="/img/home.webp" alt="Marmot TV Remote home screen" width="406" height="878">
             </div>
         </section>
 
@@ -281,18 +323,14 @@
             return language.code;
         });
 
-        var showcaseImages = [
-            '/img/home.webp',
-            '/img/air-mouse.webp',
-            '/img/tv-remote.webp',
-            '/img/utilities.webp',
-            '/img/screen-control.webp',
-            '/img/app-library.webp'
-        ];
-        var activeShowcaseIndex = 0;
         var activeLanguage = 'en';
-        var showcaseTimer = null;
-        var SHOWCASE_INTERVAL_MS = 3000;
+        var fanFocus = 0;
+        var fanTimer = null;
+        var FAN_INTERVAL_MS = 2800;
+        var fanPhones = Array.prototype.slice.call(document.querySelectorAll('#featureFanPhones .feature-fan-phone'));
+        var fanDots = Array.prototype.slice.call(document.querySelectorAll('#featureFanDots .feature-fan-dot'));
+        var fanTitleEl = document.getElementById('featureFanTitle');
+        var fanDescEl = document.getElementById('featureFanDesc');
 
         function getValue(source, path) {
             return path.split('.').reduce(function (current, key) {
@@ -375,20 +413,59 @@
             if (select) select.value = locale;
         }
 
-        function updateShowcase(index) {
-            var items = translations[activeLanguage].showcase.items;
-            activeShowcaseIndex = (index + items.length) % items.length;
-            var item = items[activeShowcaseIndex];
-            document.getElementById('showcaseTitle').textContent = item.title;
-            document.getElementById('showcaseDesc').textContent = item.desc;
-            var img = document.getElementById('showcaseImage');
-            img.src = showcaseImages[activeShowcaseIndex];
-            img.alt = item.alt;
-            document.querySelectorAll('.showcase-dot').forEach(function (dot) {
-                var active = Number(dot.dataset.index) === activeShowcaseIndex;
+        function getShowcaseItems() {
+            return (translations[activeLanguage] && translations[activeLanguage].showcase && translations[activeLanguage].showcase.items) || [];
+        }
+
+        function posForOffset(offset, total) {
+            if (offset === 0) return 'center';
+            if (offset === 1) return 'right';
+            if (offset === total - 1) return 'left';
+            return 'hidden';
+        }
+
+        function setFanFocus(index) {
+            var items = getShowcaseItems();
+            if (!items.length || !fanTitleEl || !fanDescEl) return;
+            fanFocus = (index + items.length) % items.length;
+            fanPhones.forEach(function (phone) {
+                var i = Number(phone.dataset.index);
+                var offset = (i - fanFocus + items.length) % items.length;
+                phone.dataset.pos = posForOffset(offset, items.length);
+                var item = items[i];
+                if (!item) return;
+                var label = item.label || item.title;
+                phone.setAttribute('aria-label', item.title);
+                var labelEl = phone.querySelector('[data-fan-label]');
+                if (labelEl) labelEl.textContent = label;
+                var screen = phone.querySelector('.feature-fan-screen');
+                if (screen && item.alt) screen.alt = item.alt;
+            });
+            fanTitleEl.textContent = items[fanFocus].title;
+            fanDescEl.textContent = items[fanFocus].desc;
+            fanDots.forEach(function (dot) {
+                var active = Number(dot.dataset.index) === fanFocus;
                 dot.classList.toggle('is-active', active);
                 dot.setAttribute('aria-selected', active ? 'true' : 'false');
+                var item = items[Number(dot.dataset.index)];
+                if (item) dot.setAttribute('aria-label', item.title);
             });
+        }
+
+        function nextFan() {
+            setFanFocus(fanFocus + 1);
+        }
+
+        function startFanAutoPlay() {
+            stopFanAutoPlay();
+            fanTimer = window.setInterval(nextFan, FAN_INTERVAL_MS);
+        }
+
+        function stopFanAutoPlay() {
+            if (fanTimer) {
+                window.clearInterval(fanTimer);
+                fanTimer = null;
+            }
         }
 
         function setLanguage(locale) {
@@ -396,24 +473,8 @@
             applyAttributes(activeLanguage);
             applyText(activeLanguage);
             updateLanguageSelect(activeLanguage);
-            updateShowcase(activeShowcaseIndex);
+            setFanFocus(fanFocus);
             window.localStorage.setItem(storageKey, activeLanguage);
-        }
-
-        function nextShowcase() {
-            updateShowcase(activeShowcaseIndex + 1);
-        }
-
-        function startShowcaseAutoPlay() {
-            stopShowcaseAutoPlay();
-            showcaseTimer = window.setInterval(nextShowcase, SHOWCASE_INTERVAL_MS);
-        }
-
-        function stopShowcaseAutoPlay() {
-            if (showcaseTimer) {
-                window.clearInterval(showcaseTimer);
-                showcaseTimer = null;
-            }
         }
 
         var languageSelect = document.getElementById('languageSelect');
@@ -423,16 +484,36 @@
             });
         }
 
-        document.querySelectorAll('.showcase-dot').forEach(function (dot) {
+        fanPhones.forEach(function (phone) {
+            phone.addEventListener('click', function () {
+                setFanFocus(Number(phone.dataset.index));
+                startFanAutoPlay();
+            });
+        });
+        fanDots.forEach(function (dot) {
             dot.addEventListener('click', function () {
-                updateShowcase(Number(dot.dataset.index));
-                startShowcaseAutoPlay();
+                setFanFocus(Number(dot.dataset.index));
+                startFanAutoPlay();
             });
         });
 
+        var fanSection = document.getElementById('featureFanSection');
+        if (fanSection && 'IntersectionObserver' in window) {
+            var fanIo = new IntersectionObserver(function (entries) {
+                var entry = entries[0];
+                if (entry && entry.isIntersecting) {
+                    startFanAutoPlay();
+                } else {
+                    stopFanAutoPlay();
+                }
+            }, { threshold: 0.25 });
+            fanIo.observe(fanSection);
+        } else {
+            startFanAutoPlay();
+        }
+
         renderLanguageOptions();
         setLanguage(getRequestedLanguage());
-        startShowcaseAutoPlay();
     })();
     </script>
 </body>

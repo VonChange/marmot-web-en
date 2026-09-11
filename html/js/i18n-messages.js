@@ -63,14 +63,15 @@
                     screen: { title: 'Screen tools', desc: 'Use practical screen controls and shortcuts when the TV interface is hard to operate from the sofa.' }
                 },
                 showcase: {
-                    eyebrow: 'App screenshots',
+                    title: 'Feature overview',
+                    liveEyebrow: 'Real app screens',
                     items: [
-                        { title: 'One place for big-screen control', desc: 'TV remote, app tools, and device utilities stay together so you can move quickly.', alt: 'Marmot TV Remote home screen' },
-                        { title: 'Air Mouse touch control', desc: 'Swipe on your phone to move the TV cursor. Tap to click, and use two fingers to drag the screen.', alt: 'Marmot TV Remote Air Mouse screen' },
-                        { title: 'Classic TV remote on your phone', desc: 'Use a familiar D-pad, OK, volume, and shortcut buttons when you want button-style control.', alt: 'Marmot TV Remote classic remote screen' },
-                        { title: 'Useful TV tools', desc: 'Open device info, app management, screenshots, logs, and other Android TV tools from the phone.', alt: 'Marmot TV Remote tools screen' },
-                        { title: 'Screen control when needed', desc: 'Use screen-oriented controls and shortcuts for devices that are hard to operate with a normal remote.', alt: 'Marmot TV Remote screen control' },
-                        { title: 'App library and management', desc: 'Keep common TV apps and management actions close at hand.', alt: 'Marmot TV Remote app library' }
+                        { label: 'Home', title: 'One place for big-screen control', desc: 'TV remote, app tools, and device utilities stay together so you can move quickly.', alt: 'Marmot TV Remote home screen' },
+                        { label: 'Air Mouse', title: 'Air Mouse touch control', desc: 'Swipe on your phone to move the TV cursor. Tap to click, and use two fingers to drag the screen.', alt: 'Marmot TV Remote Air Mouse screen' },
+                        { label: 'TV Remote', title: 'Classic TV remote on your phone', desc: 'Use a familiar D-pad, OK, volume, and shortcut buttons when you want button-style control.', alt: 'Marmot TV Remote classic remote screen' },
+                        { label: 'Utilities', title: 'Useful TV tools', desc: 'Open device info, app management, screenshots, logs, and other Android TV tools from the phone.', alt: 'Marmot TV Remote tools screen' },
+                        { label: 'Screen', title: 'Screen control when needed', desc: 'Use screen-oriented controls and shortcuts for devices that are hard to operate with a normal remote.', alt: 'Marmot TV Remote screen control' },
+                        { label: 'Apps', title: 'App library and management', desc: 'Keep common TV apps and management actions close at hand.', alt: 'Marmot TV Remote app library' }
                     ]
                 },
                 steps: {
@@ -154,14 +155,15 @@
                     screen: { title: '屏幕工具', desc: '当电视界面不方便操作时，可使用屏幕相关控制和快捷操作。' }
                 },
                 showcase: {
-                    eyebrow: '应用截图',
+                    title: '功能一览',
+                    liveEyebrow: '手机端实机界面',
                     items: [
-                        { title: '大屏控制集中入口', desc: '电视遥控、应用工具和设备工具集中在一起，操作更快。', alt: 'Marmot TV Remote 首页截图' },
-                        { title: '飞鼠触控操作', desc: '在手机上滑动即可移动电视光标，轻点点击，双指拖动屏幕。', alt: 'Marmot TV Remote 飞鼠截图' },
-                        { title: '手机上的经典电视遥控', desc: '需要按键操作时，可用熟悉的方向键、OK、音量和快捷按钮。', alt: 'Marmot TV Remote 经典遥控截图' },
-                        { title: '实用电视工具', desc: '手机端可打开设备信息、应用管理、截图、日志等 Android TV 工具。', alt: 'Marmot TV Remote 工具截图' },
-                        { title: '需要时使用屏幕控制', desc: '普通遥控器不好操作时，可使用面向屏幕的控制和快捷入口。', alt: 'Marmot TV Remote 屏幕控制截图' },
-                        { title: '应用库与应用管理', desc: '常用电视应用和管理操作放在手边。', alt: 'Marmot TV Remote 应用库截图' }
+                        { label: '首页', title: '大屏控制集中入口', desc: '电视遥控、应用工具和设备工具集中在一起，操作更快。', alt: 'Marmot TV Remote 首页截图' },
+                        { label: '飞鼠', title: '飞鼠触控操作', desc: '在手机上滑动即可移动电视光标，轻点点击，双指拖动屏幕。', alt: 'Marmot TV Remote 飞鼠截图' },
+                        { label: '遥控', title: '手机上的经典电视遥控', desc: '需要按键操作时，可用熟悉的方向键、OK、音量和快捷按钮。', alt: 'Marmot TV Remote 经典遥控截图' },
+                        { label: '工具', title: '实用电视工具', desc: '手机端可打开设备信息、应用管理、截图、日志等 Android TV 工具。', alt: 'Marmot TV Remote 工具截图' },
+                        { label: '屏幕', title: '需要时使用屏幕控制', desc: '普通遥控器不好操作时，可使用面向屏幕的控制和快捷入口。', alt: 'Marmot TV Remote 屏幕控制截图' },
+                        { label: '应用', title: '应用库与应用管理', desc: '常用电视应用和管理操作放在手边。', alt: 'Marmot TV Remote 应用库截图' }
                     ]
                 },
                 steps: {
@@ -245,14 +247,15 @@
                     screen: { title: '画面ツール', desc: '通常のリモコンで操作しにくい場面でも、画面向けの操作とショートカットを使えます。' }
                 },
                 showcase: {
-                    eyebrow: 'アプリ画面',
+                    title: '機能一覧',
+                    liveEyebrow: '実機アプリ画面',
                     items: [
-                        { title: '大画面操作をひとつに', desc: 'テレビリモコン、アプリツール、端末ユーティリティをまとめて素早く使えます。', alt: 'Marmot TV Remote のホーム画面' },
-                        { title: 'エアマウスのタッチ操作', desc: 'スマホをスワイプしてテレビのカーソルを動かし、タップでクリック、2本指で画面をドラッグできます。', alt: 'Marmot TV Remote のエアマウス画面' },
-                        { title: 'スマホのクラシックリモコン', desc: 'ボタン操作が必要なときは、方向キー、OK、音量、ショートカットをそのまま使えます。', alt: 'Marmot TV Remote のクラシックリモコン' },
-                        { title: '便利なテレビツール', desc: '端末情報、アプリ管理、スクリーンショット、ログなどをスマホから開けます。', alt: 'Marmot TV Remote のツール画面' },
-                        { title: '必要なときに画面操作', desc: '通常のリモコンで操作しにくい端末でも、画面向けの操作を使えます。', alt: 'Marmot TV Remote の画面操作' },
-                        { title: 'アプリライブラリと管理', desc: 'よく使うテレビアプリと管理操作を手元に置けます。', alt: 'Marmot TV Remote のアプリライブラリ' }
+                        { label: 'ホーム', title: '大画面操作をひとつに', desc: 'テレビリモコン、アプリツール、端末ユーティリティをまとめて素早く使えます。', alt: 'Marmot TV Remote のホーム画面' },
+                        { label: 'エアマウス', title: 'エアマウスのタッチ操作', desc: 'スマホをスワイプしてテレビのカーソルを動かし、タップでクリック、2本指で画面をドラッグできます。', alt: 'Marmot TV Remote のエアマウス画面' },
+                        { label: 'リモコン', title: 'スマホのクラシックリモコン', desc: 'ボタン操作が必要なときは、方向キー、OK、音量、ショートカットをそのまま使えます。', alt: 'Marmot TV Remote のクラシックリモコン' },
+                        { label: 'ツール', title: '便利なテレビツール', desc: '端末情報、アプリ管理、スクリーンショット、ログなどをスマホから開けます。', alt: 'Marmot TV Remote のツール画面' },
+                        { label: '画面', title: '必要なときに画面操作', desc: '通常のリモコンで操作しにくい端末でも、画面向けの操作を使えます。', alt: 'Marmot TV Remote の画面操作' },
+                        { label: 'アプリ', title: 'アプリライブラリと管理', desc: 'よく使うテレビアプリと管理操作を手元に置けます。', alt: 'Marmot TV Remote のアプリライブラリ' }
                     ]
                 },
                 steps: {
@@ -336,14 +339,15 @@
                     screen: { title: '화면 도구', desc: '일반 리모컨으로 조작하기 어려운 화면에서도 실용적인 제어와 바로가기를 사용할 수 있습니다.' }
                 },
                 showcase: {
-                    eyebrow: '앱 화면',
+                    title: '기능 한눈에',
+                    liveEyebrow: '실제 앱 화면',
                     items: [
-                        { title: '큰 화면 제어를 한곳에', desc: 'TV 리모컨, 앱 도구, 기기 유틸리티를 함께 제공해 빠르게 이동할 수 있습니다.', alt: 'Marmot TV Remote 홈 화면' },
-                        { title: '에어 마우스 터치 제어', desc: '휴대폰을 스와이프해 TV 커서를 움직이고, 탭으로 클릭하고, 두 손가락으로 화면을 드래그할 수 있습니다.', alt: 'Marmot TV Remote 에어 마우스 화면' },
-                        { title: '휴대폰의 클래식 TV 리모컨', desc: '버튼식 조작이 필요할 때 익숙한 방향키, OK, 음량, 단축 버튼을 사용할 수 있습니다.', alt: 'Marmot TV Remote 클래식 리모컨 화면' },
-                        { title: '유용한 TV 도구', desc: '기기 정보, 앱 관리, 스크린샷, 로그 등 Android TV 도구를 휴대폰에서 열 수 있습니다.', alt: 'Marmot TV Remote 도구 화면' },
-                        { title: '필요할 때 화면 제어', desc: '일반 리모컨으로 조작하기 어려운 기기도 화면 중심 제어와 바로가기를 사용할 수 있습니다.', alt: 'Marmot TV Remote 화면 제어' },
-                        { title: '앱 라이브러리와 관리', desc: '자주 쓰는 TV 앱과 관리 작업을 손쉽게 사용할 수 있습니다.', alt: 'Marmot TV Remote 앱 라이브러리' }
+                        { label: '홈', title: '큰 화면 제어를 한곳에', desc: 'TV 리모컨, 앱 도구, 기기 유틸리티를 함께 제공해 빠르게 이동할 수 있습니다.', alt: 'Marmot TV Remote 홈 화면' },
+                        { label: '에어 마우스', title: '에어 마우스 터치 제어', desc: '휴대폰을 스와이프해 TV 커서를 움직이고, 탭으로 클릭하고, 두 손가락으로 화면을 드래그할 수 있습니다.', alt: 'Marmot TV Remote 에어 마우스 화면' },
+                        { label: '리모컨', title: '휴대폰의 클래식 TV 리모컨', desc: '버튼식 조작이 필요할 때 익숙한 방향키, OK, 음량, 단축 버튼을 사용할 수 있습니다.', alt: 'Marmot TV Remote 클래식 리모컨 화면' },
+                        { label: '도구', title: '유용한 TV 도구', desc: '기기 정보, 앱 관리, 스크린샷, 로그 등 Android TV 도구를 휴대폰에서 열 수 있습니다.', alt: 'Marmot TV Remote 도구 화면' },
+                        { label: '화면', title: '필요할 때 화면 제어', desc: '일반 리모컨으로 조작하기 어려운 기기로 화면 중심 제어와 바로가기를 사용할 수 있습니다.', alt: 'Marmot TV Remote 화면 제어' },
+                        { label: '앱', title: '앱 라이브러리와 관리', desc: '자주 쓰는 TV 앱과 관리 작업을 손쉽게 사용할 수 있습니다.', alt: 'Marmot TV Remote 앱 라이브러리' }
                     ]
                 },
                 steps: {
