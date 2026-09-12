@@ -1,7 +1,7 @@
 {
-  "version": 14,
-  "versionName": "2026.08.16",
-  "releaseDate": "2026-08-16",
+  "version": 2,
+  "versionName": "2026.09.12",
+  "releaseDate": "2026-09-12",
   "announcement": {
     "title": "New Version Available",
     "content": "",
@@ -12,8 +12,8 @@
   "features": {
   },
   "android": {
-    "buildNumber": 21,
-    "versionName": "2026.08.22",
+    "buildNumber": 2,
+    "versionName": "2026.09.12",
     "forceUpdate": false,
     "announcement": {
       "title": "Android Update Available",
@@ -25,8 +25,8 @@
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.vonchange.marmot.intl"
   },
   "ios": {
-    "buildNumber": 14,
-    "versionName": "2026.08.16",
+    "buildNumber": 2,
+    "versionName": "2026.09.12",
     "appStoreUrl": "https://apps.apple.com/app/id6804331547",
     "forceUpdate": false,
     "announcement": {
