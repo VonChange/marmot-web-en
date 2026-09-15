@@ -25,8 +25,8 @@
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.vonchange.marmot.intl"
   },
   "ios": {
-    "buildNumber": 2,
-    "versionName": "2026.09.12",
+    "buildNumber": 3,
+    "versionName": "2026.09.15",
     "appStoreUrl": "https://apps.apple.com/app/id6804331547",
     "forceUpdate": false,
     "announcement": {
