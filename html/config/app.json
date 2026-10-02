@@ -31,7 +31,7 @@
     "forceUpdate": false,
     "announcement": {
       "title": "iOS Update Available",
-      "content": "1. Added remote Internet access for TVs, allowing you to control your home TV while away.\n2. Refactored PC Remote.",
+      "content": "1. Fixed known bugs.",
       "forceShow": false,
       "detailLink": "marmot://help-doc?file=release.md&title=Release%20Notes",
       "detailText": "View Details"
