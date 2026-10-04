@@ -11,6 +11,9 @@
   },
   "features": {
   },
+  "remoteAccess": {
+    "baseUrl": "https://bj.vonchange.com"
+  },
   "android": {
     "buildNumber": 2,
     "versionName": "2026.09.12",
