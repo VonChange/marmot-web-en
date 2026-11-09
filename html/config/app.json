@@ -40,6 +40,12 @@
       "detailText": "View Details"
     }
   },
+  "tvAppMarkdown": {
+    "url32": "https://m.utao.tv/marmot/app/32/tv.md",
+    "version32": 1,
+    "url64": "https://m.utao.tv/marmot/app/64/tv.md",
+    "version64": 1
+  },
   "video": {
     "versionCode": 2,
     "versionName": "20260623",
