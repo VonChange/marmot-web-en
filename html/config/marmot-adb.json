@@ -8,8 +8,8 @@
     "forceShow": false
   },
   "ios": {
-    "buildNumber": 1,
-    "versionName": "2026.09.08",
+    "buildNumber": 2,
+    "versionName": "2026.11.16",
     "appStoreUrl": "https://apps.apple.com/app/id6809703148",
     "forceUpdate": false,
     "announcement": {
