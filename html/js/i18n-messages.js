@@ -31,7 +31,18 @@
                     iosAria: 'Download Marmot TV Remote on the App Store',
                     android: 'Get it on Google Play',
                     androidAria: 'Get Marmot TV Remote on Google Play',
-                    note: 'iOS launches first. Android support is kept ready for Google Play.'
+                    companion: "Companion downloads"
+                },
+                companion: {
+                    title: "Companion app downloads",
+                    close: "Close",
+                    installOnTv: "Install on your TV",
+                    browserName: "Marmot TV Browser",
+                    platform: "Android TV / TV boxes",
+                    description: "Browse the web on your TV. Use Browser Remote in the Marmot TV Remote mobile app to move the pointer, type, open links and control video playback on supported websites.",
+                    download: "Download TV Browser (APK)",
+                    architecture: "On the GitHub release page, choose the 32-bit (v7a) or 64-bit (v8a) APK that matches your TV.",
+                    tip: "Connect your phone and TV to the same Wi-Fi network. Open Marmot TV Browser on your TV, then open Browser Remote in the mobile app and select your TV."
                 },
                 trust: {
                     touch: { title: 'Touchpad first', desc: 'Swipe, tap, and move the TV cursor naturally.' },
@@ -123,7 +134,18 @@
                     iosAria: '在 App Store 下载 Marmot TV Remote',
                     android: '前往 Google Play',
                     androidAria: '在 Google Play 获取 Marmot TV Remote',
-                    note: '首期优先上线 iOS，Android 已为后续 Google Play 做好准备。'
+                    companion: "配套下载"
+                },
+                companion: {
+                    title: "配套工具下载与使用说明",
+                    close: "关闭",
+                    installOnTv: "安装到电视",
+                    browserName: "土拨鼠大屏浏览器",
+                    platform: "适用于 Android TV 和电视盒子",
+                    description: "在电视大屏上浏览网页，配合手机 App 的「浏览器遥控」，即可移动光标、输入文字、打开链接，还可遥控部分网站的视频播放。",
+                    download: "下载大屏浏览器（APK）",
+                    architecture: "请在 GitHub 发布页选择适合电视的 32 位（v7a）或 64 位（v8a）安装包。",
+                    tip: "手机与电视需连接同一 Wi-Fi。先在电视上打开土拨鼠大屏浏览器，再进入手机 App 的「浏览器遥控」，选择电视即可连接。"
                 },
                 trust: {
                     touch: { title: '触控优先', desc: '滑动、点击、移动电视光标都更自然。' },
@@ -215,7 +237,18 @@
                     iosAria: 'App Store で Marmot TV Remote をダウンロード',
                     android: 'Google Play で入手',
                     androidAria: 'Google Play で Marmot TV Remote を入手',
-                    note: 'まず iOS 版を公開予定です。Android 版は Google Play 対応に向けて準備しています。'
+                    companion: "関連アプリのダウンロード"
+                },
+                companion: {
+                    title: "関連アプリのダウンロードと使い方",
+                    close: "閉じる",
+                    installOnTv: "テレビにインストール",
+                    browserName: "Marmot TV ブラウザ",
+                    platform: "Android TV・TV ボックス対応",
+                    description: "テレビの大画面でウェブを楽しめます。スマホアプリの「ブラウザリモコン」で、ポインターの移動、文字入力、リンクを開く操作ができます。対応サイトでは動画の再生も操作できます。",
+                    download: "テレビ用ブラウザをダウンロード（APK）",
+                    architecture: "GitHub のリリースページで、お使いのテレビに合った 32 ビット（v7a）または 64 ビット（v8a）の APK を選んでください。",
+                    tip: "スマホとテレビを同じ Wi-Fi に接続してください。テレビで Marmot TV ブラウザを起動し、スマホアプリの「ブラウザリモコン」からテレビを選択すると接続できます。"
                 },
                 trust: {
                     touch: { title: 'タッチ操作中心', desc: 'スワイプ、タップ、カーソル移動を自然に操作できます。' },
@@ -307,7 +340,18 @@
                     iosAria: 'App Store에서 Marmot TV Remote 다운로드',
                     android: 'Google Play에서 받기',
                     androidAria: 'Google Play에서 Marmot TV Remote 받기',
-                    note: 'iOS를 먼저 출시합니다. Android 지원은 Google Play를 위해 준비되어 있습니다.'
+                    companion: "연동 앱 다운로드"
+                },
+                companion: {
+                    title: "연동 앱 다운로드 및 사용 안내",
+                    close: "닫기",
+                    installOnTv: "TV에 설치",
+                    browserName: "Marmot TV 브라우저",
+                    platform: "Android TV 및 TV 박스 지원",
+                    description: "TV의 큰 화면에서 웹을 이용하세요. 휴대폰 앱의 ‘브라우저 원격’ 기능으로 포인터 이동, 텍스트 입력, 링크 열기를 할 수 있으며, 지원되는 웹사이트에서는 동영상 재생도 제어할 수 있습니다.",
+                    download: "TV 브라우저 다운로드 (APK)",
+                    architecture: "GitHub 릴리스 페이지에서 TV에 맞는 32비트(v7a) 또는 64비트(v8a) APK를 선택하세요.",
+                    tip: "휴대폰과 TV를 같은 Wi-Fi에 연결하세요. TV에서 Marmot TV 브라우저를 실행한 뒤, 휴대폰 앱의 ‘브라우저 원격’에서 TV를 선택하면 연결됩니다."
                 },
                 trust: {
                     touch: { title: '터치패드 우선', desc: '스와이프, 탭, TV 커서 이동을 자연스럽게 할 수 있습니다.' },

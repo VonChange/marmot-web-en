@@ -224,10 +224,164 @@ h1 {
     color: var(--text);
 }
 
-.release-note {
-    margin: 14px 0 0;
+/* 配套下载独立成行，保持手机应用下载的主要层级。 */
+.companion-download {
+    margin-top: 12px;
+}
+
+.companion-download-button {
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.companion-download-button:hover {
+    border-color: var(--muted);
+    color: var(--text);
+}
+
+.companion-download-button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.download-modal {
+    width: min(580px, calc(100% - 32px));
+    max-height: calc(100vh - 48px);
+    max-height: calc(100dvh - 48px);
+    padding: clamp(20px, 4vw, 28px);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    overflow-y: auto;
+}
+
+.download-modal::backdrop {
+    background: rgba(20, 32, 25, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.download-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.download-modal-header h2 {
+    margin: 4px 0 0;
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+.download-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.download-modal-close:hover {
+    color: var(--text);
+}
+
+.download-card {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.download-card-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--surface-soft);
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.download-card h3 {
+    margin: 16px 0 4px;
+    font-size: 1.15rem;
+}
+
+.download-card-platform,
+.download-card-hint {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.8125rem;
+}
+
+.download-card-desc {
+    margin: 16px 0;
+    font-size: 0.9375rem;
+}
+
+.download-card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    background: var(--text);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.download-card-button:hover {
+    background: var(--primary-dark);
+}
+
+.download-card-button:focus-visible,
+.download-modal-close:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.download-card-hint {
+    margin-top: 10px;
+}
+
+.download-modal-tip {
+    margin: 20px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.8125rem;
 }
 
 .hero-media {

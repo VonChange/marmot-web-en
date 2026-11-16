@@ -93,7 +93,9 @@
                         <span data-i18n="download.android">Get it on Google Play</span>
                     </a>
                 </div>
-                <p class="release-note" data-i18n="download.note">iOS launches first. Android support is kept ready for Google Play.</p>
+                <div class="companion-download">
+                    <button type="button" class="companion-download-button" id="openDownloadModal" aria-haspopup="dialog" aria-controls="downloadModal" data-i18n="download.companion">Companion downloads</button>
+                </div>
             </div>
 
             <div class="hero-media" aria-hidden="true">
@@ -310,6 +312,25 @@
         <p data-i18n="footer.copyright">© 2026 Marmot TV Remote. All rights reserved.</p>
     </footer>
 
+    <!-- 参照国内版展示配套工具，下载操作集中在弹窗内。 -->
+    <dialog class="download-modal" id="downloadModal" aria-labelledby="downloadModalTitle">
+        <div class="download-modal-header">
+            <h2 id="downloadModalTitle" data-i18n="companion.title">Companion app downloads</h2>
+            <button type="button" class="download-modal-close" id="closeDownloadModal" autofocus data-i18n-attr="aria-label:companion.close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <article class="download-card">
+            <span class="download-card-tag" data-i18n="companion.installOnTv">Install on your TV</span>
+            <h3 data-i18n="companion.browserName">Marmot TV Browser</h3>
+            <p class="download-card-platform" data-i18n="companion.platform">Android TV / TV boxes</p>
+            <p class="download-card-desc" data-i18n="companion.description">Browse the web on your TV. Use Browser Remote in the Marmot TV Remote mobile app to move the pointer, type, open links and control video playback on supported websites.</p>
+            <a class="download-card-button" href="https://github.com/VonChange/marmot-web-en/releases/tag/v20261116" target="_blank" rel="noopener noreferrer" data-i18n="companion.download">Download TV Browser (APK)</a>
+            <p class="download-card-hint" data-i18n="companion.architecture">On the GitHub release page, choose the 32-bit (v7a) or 64-bit (v8a) APK that matches your TV.</p>
+        </article>
+        <p class="download-modal-tip" data-i18n="companion.tip">Connect your phone and TV to the same Wi-Fi network. Open Marmot TV Browser on your TV, then open Browser Remote in the mobile app and select your TV.</p>
+    </dialog>
+
     <script src="js/i18n-messages.js"></script>
     <script>
     (function () {
@@ -511,6 +532,29 @@
         } else {
             startFanAutoPlay();
         }
+
+        // 原生模态弹窗负责焦点限制、Escape 关闭及关闭后的焦点恢复。
+        var downloadModal = document.getElementById('downloadModal');
+        document.getElementById('openDownloadModal').addEventListener('click', function () {
+            if (downloadModal.open) return;
+            downloadModal.showModal();
+            document.body.classList.add('modal-open');
+        });
+        document.getElementById('closeDownloadModal').addEventListener('click', function () {
+            downloadModal.close();
+        });
+        downloadModal.addEventListener('close', function () {
+            document.body.classList.remove('modal-open');
+        });
+        // 仅点击面板外的遮罩时关闭，面板内部的空白区域仍可正常操作。
+        downloadModal.addEventListener('click', function (event) {
+            if (event.target !== downloadModal) return;
+            var bounds = downloadModal.getBoundingClientRect();
+            if (event.clientX < bounds.left || event.clientX > bounds.right ||
+                event.clientY < bounds.top || event.clientY > bounds.bottom) {
+                downloadModal.close();
+            }
+        });
 
         renderLanguageOptions();
         setLanguage(getRequestedLanguage());
