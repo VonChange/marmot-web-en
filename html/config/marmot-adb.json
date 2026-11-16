@@ -14,7 +14,7 @@
     "forceUpdate": false,
     "announcement": {
       "title": "Marmot ADB Update Available",
-      "content": "1. More reliable app installation with clearer results and error messages.\n2. Improved compatibility with older TV systems.\n3. Improved screen control recovery and video rendering.\n4. More reliable device connections and reconnections.\n5. Improved file selection and uploads.",
+      "content": "Bug fixes and stability improvements.",
       "forceShow": false
     }
   }
