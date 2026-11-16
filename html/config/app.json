@@ -42,9 +42,9 @@
   },
   "tvAppMarkdown": {
     "url32": "https://m.utao.tv/marmot/app/32/tv.md",
-    "version32": 1,
+    "version32": 3,
     "url64": "https://m.utao.tv/marmot/app/64/tv.md",
-    "version64": 1
+    "version64": 3
   },
   "video": {
     "versionCode": 2,
