@@ -1,0 +1,21 @@
+{
+  "applicationId": "com.vonchange.marmot.adb",
+  "version": 1,
+  "versionName": "2026.09.08",
+  "announcement": {
+    "title": "New Version Available",
+    "content": "",
+    "forceShow": false
+  },
+  "ios": {
+    "buildNumber": 1,
+    "versionName": "2026.09.08",
+    "appStoreUrl": "https://apps.apple.com/app/id6809703148",
+    "forceUpdate": false,
+    "announcement": {
+      "title": "Marmot ADB Update Available",
+      "content": "1. More reliable app installation with clearer results and error messages.\n2. Improved compatibility with older TV systems.\n3. Improved screen control recovery and video rendering.\n4. More reliable device connections and reconnections.\n5. Improved file selection and uploads.",
+      "forceShow": false
+    }
+  }
+}
