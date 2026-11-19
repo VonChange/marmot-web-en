@@ -1,0 +1,14 @@
+{
+  "applicationId": "com.vonchange.ehco",
+  "ios": {
+    "buildNumber": 1,
+    "versionName": "2026.11.19",
+    "appStoreUrl": "",
+    "forceUpdate": false,
+    "announcement": {
+      "title": "",
+      "content": "",
+      "forceShow": false
+    }
+  }
+}
