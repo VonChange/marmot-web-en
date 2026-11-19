@@ -8,7 +8,7 @@
     "announcement": {
       "title": "Echo Update Available",
       "content": "Echo supports tabbed browsing, file downloads, and ad blocking.",
-      "forceShow": false
+      "forceShow": true
     }
   }
 }
