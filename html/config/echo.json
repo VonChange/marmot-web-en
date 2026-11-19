@@ -4,11 +4,10 @@
     "buildNumber": 2,
     "versionName": "2026.11.19",
     "appStoreUrl": "https://apps.apple.com/app/id6835877376",
-    "forceUpdate": false,
+    "forceUpdate": true,
     "announcement": {
       "title": "Echo Update Available",
-      "content": "Echo supports tabbed browsing, file downloads, and ad blocking.",
-      "forceShow": true
+      "content": "Echo supports tabbed browsing, file downloads, and ad blocking."
     }
   }
 }
