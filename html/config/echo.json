@@ -1,13 +1,13 @@
 {
   "applicationId": "com.vonchange.ehco",
   "ios": {
-    "buildNumber": 1,
+    "buildNumber": 2,
     "versionName": "2026.11.19",
     "appStoreUrl": "https://apps.apple.com/app/id6835877376",
     "forceUpdate": false,
     "announcement": {
-      "title": "",
-      "content": "",
+      "title": "Echo Update Available",
+      "content": "Echo supports tabbed browsing, file downloads, and ad blocking.",
       "forceShow": false
     }
   }
